@@ -9,6 +9,10 @@ import GateEntry from "./pages/GateEntry";
 import QualityControl from "./pages/QualityControl";
 import WeightManagement from "./pages/WeightManagement";
 import GodownManagement from "./pages/GodownManagement";
+import PreCleaning from "./pages/PreCleaning";
+import ProductionOrders from "./pages/ProductionOrders";
+import ProductionProcess from "./pages/ProductionProcess";
+import FinishedGoods from "./pages/FinishedGoods";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +30,10 @@ const App = () => (
             <Route path="/quality-control" element={<QualityControl />} />
             <Route path="/weight-management" element={<WeightManagement />} />
             <Route path="/godown-management" element={<GodownManagement />} />
+            <Route path="/pre-cleaning" element={<PreCleaning />} />
+            <Route path="/production-orders" element={<ProductionOrders />} />
+            <Route path="/production-process" element={<ProductionProcess />} />
+            <Route path="/finished-goods" element={<FinishedGoods />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
