@@ -13,6 +13,11 @@ import PreCleaning from "./pages/PreCleaning";
 import ProductionOrders from "./pages/ProductionOrders";
 import ProductionProcess from "./pages/ProductionProcess";
 import FinishedGoods from "./pages/FinishedGoods";
+import SalesOrders from "./pages/SalesOrders";
+import Dispatch from "./pages/Dispatch";
+import Reports from "./pages/Reports";
+import Masters from "./pages/Masters";
+import Users from "./pages/Users";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +39,11 @@ const App = () => (
             <Route path="/production-orders" element={<ProductionOrders />} />
             <Route path="/production-process" element={<ProductionProcess />} />
             <Route path="/finished-goods" element={<FinishedGoods />} />
+            <Route path="/sales-orders" element={<SalesOrders />} />
+            <Route path="/dispatch" element={<Dispatch />} />
+            <Route path="/reports" element={<Reports />} />
+            <Route path="/masters" element={<Masters />} />
+            <Route path="/users" element={<Users />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
