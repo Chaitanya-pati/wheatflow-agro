@@ -30,7 +30,7 @@ const ProductionOrders = () => {
     orderNumber: "",
     quantity: "",
     productType: "",
-    priority: "medium" as const,
+    priority: "medium" as 'low' | 'medium' | 'high',
     targetDate: "",
     description: ""
   })
@@ -239,7 +239,7 @@ const ProductionOrders = () => {
               <Label htmlFor="priority">Priority</Label>
               <Select 
                 value={orderForm.priority} 
-                onValueChange={(value) => setOrderForm({...orderForm, priority: value})}
+                onValueChange={(value) => setOrderForm({...orderForm, priority: value as 'low' | 'medium' | 'high'})}
               >
                 <SelectTrigger>
                   <SelectValue />
